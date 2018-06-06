@@ -10,4 +10,10 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-console.log(process.env.SERVICE, process.env.PASS, process.env.USER);
+transporter.sendMail({
+  from: process.env.USER,
+  to: "stevenryall812@gmail.com",
+  subject: "Nuts",
+  text: "Where is my car?",
+  html: "<h1>Hello</h1>"
+});
